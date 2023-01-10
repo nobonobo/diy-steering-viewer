@@ -2,12 +2,14 @@
   <style>
     body {
       background-color: green;
+      margin: 0;
     }
   </style>
+  <script src="./obsstudio.js"></script>
 </head>
 <svg
-  width="230"
-  height="120"
+  width="460"
+  height="240"
   viewBox="0 0 230 120"
   version="1.1"
   id="svg5"
@@ -170,17 +172,8 @@
     </text>
   </g>
 </svg>
-<video style="width: 240px; height: 120px"></video>
 <script>
   document.addEventListener("DOMContentLoaded", async () => {
-    let stream = await navigator.mediaDevices.getUserMedia({
-      video: { width: 240, height: 120 },
-    });
-    var video = document.querySelector("video");
-    video.srcObject = stream;
-    video.onloadedmetadata = function (e) {
-      video.play();
-    };
-    return stream;
+    console.log("started");
   });
 </script>
